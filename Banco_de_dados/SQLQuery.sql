@@ -14,3 +14,15 @@ INSERT INTO tbl_Usuarios(nm_Usuario, us_Usuario, sn_Usuario)
 VALUES('Teste Teste', 'Teste', 'Teste1234')
 
 SELECT * FROM tbl_Usuarios
+
+CREATE TABLE tbl_Produtos
+(
+    id_Produto INT PRIMARY KEY IDENTITY,
+    nm_Produto VARCHAR(60) NOT NULL UNIQUE,
+    vlr_Produto DECIMAL(10, 2) NOT NULL
+)
+
+SELECT * FROM tbl_Produtos
+
+INSERT INTO tbl_Produtos(nm_Produto, vlr_Produto)
+VALUES('Teste Teste', 'Teste', 'Teste1234')

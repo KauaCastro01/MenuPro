@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos Importantes\\Console\\MenuPro\\",
+  "WorkspaceRootPath": "C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos\\Console\\MenuPro\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{780EE6B3-92DB-4B5F-A356-17B3174EFAA2}|MenuPro\\MenuPro.csproj|c:\\users\\kauac\\onedrive\\documentos\\programa\u00E7\u00E3o\\projetos importantes\\console\\menupro\\menupro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{780EE6B3-92DB-4B5F-A356-17B3174EFAA2}|MenuPro\\MenuPro.csproj|solutionrelative:menupro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{780EE6B3-92DB-4B5F-A356-17B3174EFAA2}|MenuPro\\MenuPro.csproj|c:\\users\\kauac\\onedrive\\documentos\\programa\u00E7\u00E3o\\projetos\\console\\menupro\\menupro\\funcoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{780EE6B3-92DB-4B5F-A356-17B3174EFAA2}|MenuPro\\MenuPro.csproj|solutionrelative:menupro\\funcoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{780EE6B3-92DB-4B5F-A356-17B3174EFAA2}|MenuPro\\MenuPro.csproj|C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos Importantes\\Console\\MenuPro\\menupro\\conexaosql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{780EE6B3-92DB-4B5F-A356-17B3174EFAA2}|MenuPro\\MenuPro.csproj|C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos\\Console\\MenuPro\\menupro\\conexaosql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{780EE6B3-92DB-4B5F-A356-17B3174EFAA2}|MenuPro\\MenuPro.csproj|solutionrelative:menupro\\conexaosql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{780EE6B3-92DB-4B5F-A356-17B3174EFAA2}|MenuPro\\MenuPro.csproj|C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos Importantes\\Console\\MenuPro\\menupro\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{780EE6B3-92DB-4B5F-A356-17B3174EFAA2}|MenuPro\\MenuPro.csproj|C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos\\Console\\MenuPro\\menupro\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{780EE6B3-92DB-4B5F-A356-17B3174EFAA2}|MenuPro\\MenuPro.csproj|solutionrelative:menupro\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{780EE6B3-92DB-4B5F-A356-17B3174EFAA2}|MenuPro\\MenuPro.csproj|c:\\users\\kauac\\onedrive\\documentos\\programa\u00E7\u00E3o\\projetos\\console\\menupro\\menupro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{780EE6B3-92DB-4B5F-A356-17B3174EFAA2}|MenuPro\\MenuPro.csproj|solutionrelative:menupro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,41 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "funcoes.cs",
+              "DocumentMoniker": "C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos\\Console\\MenuPro\\MenuPro\\funcoes.cs",
+              "RelativeDocumentMoniker": "MenuPro\\funcoes.cs",
+              "ToolTip": "C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos\\Console\\MenuPro\\MenuPro\\funcoes.cs",
+              "RelativeToolTip": "MenuPro\\funcoes.cs",
+              "ViewState": "AgIAAPgAAAAAAAAAAAAswAEBAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T23:35:21.425Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "conexaoSQL.cs",
-              "DocumentMoniker": "C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos Importantes\\Console\\MenuPro\\MenuPro\\conexaoSQL.cs",
+              "DocumentMoniker": "C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos\\Console\\MenuPro\\MenuPro\\conexaoSQL.cs",
               "RelativeDocumentMoniker": "MenuPro\\conexaoSQL.cs",
-              "ToolTip": "C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos Importantes\\Console\\MenuPro\\MenuPro\\conexaoSQL.cs",
+              "ToolTip": "C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos\\Console\\MenuPro\\MenuPro\\conexaoSQL.cs",
               "RelativeToolTip": "MenuPro\\conexaoSQL.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBQAAABGAAAAAAAAAA==",
+              "ViewState": "AgIAALQAAAAAAAAAAAAAALkAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T22:00:18.787Z"
+              "WhenOpened": "2025-03-08T22:00:18.787Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos Importantes\\Console\\MenuPro\\MenuPro\\Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos\\Console\\MenuPro\\MenuPro\\Usuario.cs",
               "RelativeDocumentMoniker": "MenuPro\\Usuario.cs",
-              "ToolTip": "C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos Importantes\\Console\\MenuPro\\MenuPro\\Usuario.cs",
+              "ToolTip": "C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos\\Console\\MenuPro\\MenuPro\\Usuario.cs",
               "RelativeToolTip": "MenuPro\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T21:51:02.616Z"
+              "WhenOpened": "2025-03-08T21:51:02.616Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos Importantes\\Console\\MenuPro\\MenuPro\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos\\Console\\MenuPro\\MenuPro\\Program.cs",
               "RelativeDocumentMoniker": "MenuPro\\Program.cs",
-              "ToolTip": "C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos Importantes\\Console\\MenuPro\\MenuPro\\Program.cs",
+              "ToolTip": "C:\\Users\\kauac\\OneDrive\\Documentos\\Programa\u00E7\u00E3o\\Projetos\\Console\\MenuPro\\MenuPro\\Program.cs",
               "RelativeToolTip": "MenuPro\\Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAwwCYAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAGsAAAAAAAAAAAA9wHgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-08T21:41:45.939Z",
               "EditorCaption": ""

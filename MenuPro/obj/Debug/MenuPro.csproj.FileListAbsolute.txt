@@ -5,3 +5,10 @@ C:\Users\kauac\OneDrive\Documentos\Programação\Estudo\Aula\MenuPro\MenuPro\obj
 C:\Users\kauac\OneDrive\Documentos\Programação\Estudo\Aula\MenuPro\MenuPro\obj\Debug\MenuPro.csproj.CoreCompileInputs.cache
 C:\Users\kauac\OneDrive\Documentos\Programação\Estudo\Aula\MenuPro\MenuPro\obj\Debug\MenuPro.exe
 C:\Users\kauac\OneDrive\Documentos\Programação\Estudo\Aula\MenuPro\MenuPro\obj\Debug\MenuPro.pdb
+C:\Users\kauac\OneDrive\Documentos\Programação\Projetos\Console\MenuPro\MenuPro\bin\Debug\MenuPro.exe.config
+C:\Users\kauac\OneDrive\Documentos\Programação\Projetos\Console\MenuPro\MenuPro\bin\Debug\MenuPro.exe
+C:\Users\kauac\OneDrive\Documentos\Programação\Projetos\Console\MenuPro\MenuPro\bin\Debug\MenuPro.pdb
+C:\Users\kauac\OneDrive\Documentos\Programação\Projetos\Console\MenuPro\MenuPro\obj\Debug\MenuPro.csproj.AssemblyReference.cache
+C:\Users\kauac\OneDrive\Documentos\Programação\Projetos\Console\MenuPro\MenuPro\obj\Debug\MenuPro.csproj.CoreCompileInputs.cache
+C:\Users\kauac\OneDrive\Documentos\Programação\Projetos\Console\MenuPro\MenuPro\obj\Debug\MenuPro.exe
+C:\Users\kauac\OneDrive\Documentos\Programação\Projetos\Console\MenuPro\MenuPro\obj\Debug\MenuPro.pdb

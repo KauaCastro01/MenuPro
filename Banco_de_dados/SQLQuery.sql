@@ -36,3 +36,6 @@ CREATE TABLE tbl_LucroDia
 )
 
 SELECT * FROM tbl_LucroDia
+
+ALTER TABLE tbl_LucroDia
+ADD responsavel VARCHAR(60) NOT NULL DEFAULT ''

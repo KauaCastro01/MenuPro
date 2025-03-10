@@ -10,6 +10,7 @@ namespace MenuPro
     {
         public bool caixaAberto { get; set; } = false;
         public static string nomeProduto { get; set; }
+        public static string nomeFuncionario { get; set; }
         public static string nomeParaExibir { get; set; }
         public static decimal valorProduto { get; set; }
         public decimal valorFinal { get; set; }
@@ -301,6 +302,128 @@ namespace MenuPro
                 }
             }
         }
+        //
+        public void inserirNovoFuncionario(int i)
+        {
+            sqlParaUsuario sqlUser = new sqlParaUsuario();
+            string nome = "";
+            string usuario = "";
+            string senha = "";
+            string nomeAntigo = nomeFuncionario;
+            while (true)
+            {
+                try
+                {
+                    Console.Clear();
+                    Console.WriteLine("MenuPro\n");
+                    Console.WriteLine("Digite 'Sair', Para Retonar Para O Menu");
+                    Console.Write("Insira O Nome Do Funcionario: ");
+                    nome = Console.ReadLine();
+                    if (nome.ToLower() == "sair") { Program.menuPrincipal(); }
+                    if (nome.Length >= 1 && nome.Length <= 60)
+                    {
+                        Console.Write("Insira O Usuario Do Funcionario: ");
+                        usuario = Console.ReadLine();
+                        if (usuario.Length >= 1 && usuario.Length <= 20)
+                        {
+                            Console.Write("Insira A Senha Do Funcionario: ");
+                            senha = Console.ReadLine();
+                            if (senha.Length >= 1 && senha.Length <= 20)
+                            {
+                                switch (i)
+                                {
+                                    case 1: sqlUser.adicionarFuncionario(nome, usuario, senha); break;
+                                    case 2: sqlUser.editarFuncionario(nome, usuario, senha, nomeAntigo); break;
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine($"\a\nA Senha Do Funcionario Deve Possuir Entre 1 a 20 Caracteres!");
+                                Console.Write("Pressione Qualquer Tecla Para Continuar...");
+                                Console.ReadKey();
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine($"\a\nO Usuario Do Funcionario Deve Possuir Entre 1 a 20 Caracteres!");
+                            Console.Write("Pressione Qualquer Tecla Para Continuar...");
+                            Console.ReadKey();
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine($"\a\nO Nome Do Funcionario Deve Possuir Entre 1 a 60 Caracteres!");
+                        Console.Write("Pressione Qualquer Tecla Para Continuar...");
+                        Console.ReadKey();
+                    }
+                }
+                catch (Exception Erro)
+                {
+                    Console.WriteLine($"\a\nErro: {Erro.Message}");
+                    Console.Write("Pressione Qualquer Tecla Para Continuar...");
+                    Console.ReadKey();
+                }
+            }
+        }
+
+        public void editarFuncionario(int i)
+        {
+            sqlParaUsuario sqlUser = new sqlParaUsuario();
+            while (true)
+            {
+                try
+                {
+                    Console.Clear();
+                    Console.WriteLine("Caso Deseje Voltar Para O Menu Principal, Digite 'Sair'");
+                    Console.Write("\nUsuario Do Funcionario: ");
+                    nomeFuncionario = Console.ReadLine();
+                    if (nomeFuncionario.ToLower() == "sair") { Program.menuPrincipal(); }
+                    if (nomeFuncionario.Length >= 1 && nomeFuncionario.Length <= 20)
+                    {
+                        switch (i)
+                        {
+                            case 1: sqlUser.pesquisarFuncionario(nomeFuncionario); break;
+                            case 2: removerFuncionario(); break;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine($"\n\aO Nome Do Produto Deve Possuir Entre 1 a 20 Caracteres!");
+                        Console.Write("Pressione Qualquer Tecla Para Continuar...");
+                        Console.ReadKey();
+                    }
+                }
+                catch (Exception Erro)
+                {
+                    Console.WriteLine($"\a\nErro: {Erro.Message}");
+                    Console.Write("Pressione Qualquer Tecla Para Continuar...");
+                    Console.ReadKey();
+                }
+            }
+        }
+        public void removerFuncionario()
+        {
+            sqlParaUsuario sU = new sqlParaUsuario();
+            conexaoSQL cSql = new conexaoSQL();
+            while (true)
+            {
+                Console.WriteLine($"Funcionario Selecionado: {nomeFuncionario}");
+                Console.Write("Você Deseaja Remover Este Funcionario[S||N]: ");
+                string opcao = Console.ReadLine().ToLower();
+                switch (opcao)
+                {
+                    case "s":
+                        sU.deletarFuncionario(nomeFuncionario);
+                        break;
+                    case "n": Program.menuPrincipal(); break;
+                    default:
+                        Console.WriteLine($"\a\nOpção Inválida!");
+                        Console.Write("Pressione Qualquer Tecla Para Continuar...");
+                        Console.ReadKey();
+                        Console.Clear();
+                        break;
+                }
+            }
+        }
     }
 }
-

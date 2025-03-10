@@ -38,7 +38,13 @@ namespace MenuPro
                 {
                     switch (i)
                     {
-                        case 1: Program.menuPrincipal(); break;
+                        case 1:
+                            while (dr.Read())
+                            {
+                                Usuario.nomeDoUsuario = dr.GetString(dr.GetOrdinal("nm_Usuario"));
+                            }
+                            Program.menuPrincipal();
+                            break;
                         case 2: func.adicionarProduto(2); break;
                         case 3: func.removerProduto(); break;
                     }
@@ -75,6 +81,7 @@ namespace MenuPro
         //Metodo para exibição dos produtos
         public void exibirProdutos()
         {
+            cn.Close();
             try
             {
                 cn.Open();

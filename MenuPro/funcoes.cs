@@ -20,6 +20,7 @@ namespace MenuPro
         //Pesquisar Os Produtos
         public void pesquisarProduto(int i)
         {
+            Console.WriteLine("\n");
             conexaoSQL cSql = new conexaoSQL();
             try
             {
@@ -34,6 +35,7 @@ namespace MenuPro
                     {
                         case 1: cSql.obterPrecoProduto(nomeProduto); inserirValores(); break;
                         case 2: cSql.efetueLogin(nomeProduto, "", 2); break;
+                        case 3: cSql.efetueLogin(nomeProduto, "", 3); break;
                     }
                 }
                 else
@@ -88,15 +90,16 @@ namespace MenuPro
         //Adicionar Mais Produtos
         public void desejaAdicionarMais()
         {
+            Console.WriteLine("\n");
             while (true)
             {
                 try
                 {
-                    Console.Write("\nAdicionar Mais Itens[S||N]: ");
+                    Console.Write("Adicionar Mais Itens[S||N]: ");
                     string opcao = Console.ReadLine().ToLower();
                     switch (opcao)
                     {
-                        case "s": Console.Clear(); pesquisarProduto(1); break;
+                        case "s": Program.menuVenda(); break;
                         case "n": formaPagamento(); break;
                         default:
                             Console.WriteLine($"\a\nOpção Inválida!");
@@ -154,12 +157,13 @@ namespace MenuPro
         //Caso O Pagamento Seja Em Dinheiro
         public void pagamentoDinheiro()
         {
+            Console.WriteLine("\n");
             while (true)
             {
                 try
                 {
                     Console.WriteLine("Insira O Valor Entregue Pelo Cliente:");
-                    Console.WriteLine("Caso Queria Adicionar Os Centavos Use ',' Exemplo: 4,20");
+                    Console.WriteLine("Caso Queria Adicionar Os Centavos Use ',' [Exemplo: 4,20]\n");
                     Console.Write("Digite O Valor: ");
                     decimal valor = decimal.Parse(Console.ReadLine());
                     if (valor >= 0 && valor <= 10000)
@@ -195,16 +199,19 @@ namespace MenuPro
         //Compra Finalizada
         public void compraFinalizada()
         {
+            lucroObtido lO = new lucroObtido();
+            var data = DateTime.Now;
             while (true)
             {
                 Console.Write("\nComrpa Finalizada[S||N]: ");
                 string opcao = Console.ReadLine().ToLower();
                 switch (opcao)
                 {
-                    case "s": valoresTotalProduto.Clear();
+                    case "s": 
                         Console.WriteLine($"Compra Finalizada!");
-                        Console.Write("Pressione Qualquer Tecla Para Continuar...");
+                        lO.salvarVenda(valorFinal, data);
                         Console.ReadKey();
+                        valoresTotalProduto.Clear();
                         Program.menuPrincipal(); 
                         break;
                     case "n": formaPagamento(); break;
@@ -269,7 +276,31 @@ namespace MenuPro
                 }
             }
         }
-        
+        //Pesquisar Os Produtos
+        public void removerProduto()
+        {
+            Console.WriteLine("\n");
+            conexaoSQL cSql = new conexaoSQL();
+            while (true)
+            {
+                Console.WriteLine($"Produto Selecionado: {nomeParaExibir}");
+                Console.Write("Você Deseaja Remover Este Produto[S||N]: ");
+                string opcao = Console.ReadLine().ToLower();
+                switch (opcao)
+                {
+                    case "s":
+                        cSql.deletarProduto(nomeParaExibir);
+                        break;
+                    case "n": Program.menuPrincipal(); break;
+                    default:
+                        Console.WriteLine($"\a\nOpção Inválida!");
+                        Console.Write("Pressione Qualquer Tecla Para Continuar...");
+                        Console.ReadKey();
+                        Console.Clear();
+                        break;
+                }
+            }
+        }
     }
 }
 

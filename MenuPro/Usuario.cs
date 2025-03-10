@@ -11,7 +11,6 @@ namespace MenuPro
         public string nome { get; set; }
         public string user { get; set; }
         public string senha { get; set; }
-
         public void insirirUsuario()
         {
             try

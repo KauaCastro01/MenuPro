@@ -25,4 +25,14 @@ CREATE TABLE tbl_Produtos
 SELECT * FROM tbl_Produtos
 
 INSERT INTO tbl_Produtos(nm_Produto, vlr_Produto)
-VALUES('Teste Teste', 'Teste', 'Teste1234')
+VALUES('maça', 4.50)
+
+
+CREATE TABLE tbl_LucroDia
+(
+    id_Produto INT PRIMARY KEY IDENTITY,
+    valorProduto DECIMAL (10, 2) NOT NULL,
+	dataValor DATETIME NOT NULL
+)
+
+SELECT * FROM tbl_LucroDia

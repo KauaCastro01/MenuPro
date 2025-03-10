@@ -32,20 +32,15 @@ namespace MenuPro
                     cmd.Parameters.AddWithValue("@nome", nome);
                     funcoes.nomeParaExibir = nome;
                 }
-
-                    cmd.Connection = cn;
+                cmd.Connection = cn;
                 dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
                     switch (i)
                     {
                         case 1: Program.menuPrincipal(); break;
-                        case 2:
-                            Console.WriteLine($"\a\nProduto Encontrado, Digite O Novo Nome Para Ele");
-                            Console.Write("Pressione Qualquer Tecla Para Continuar...");
-                            Console.ReadKey();
-                            func.adicionarProduto(2);
-                            break;
+                        case 2: func.adicionarProduto(2); break;
+                        case 3: func.removerProduto(); break;
                     }
                 }
                 else
@@ -213,6 +208,41 @@ namespace MenuPro
             catch (Exception Erro)
             {
                 Console.WriteLine($"\a\nProduto Já Existente {Erro.Message}");
+                Console.Write("Pressione Qualquer Tecla Para Continuar...");
+                Console.ReadKey();
+                return;
+            }
+            finally { cn.Close(); }
+        }
+        //Deleetar O Produto
+        public void deletarProduto(string nomeProduto)
+        {
+            try
+            {
+                cn.Open();
+                cmd.Parameters.Clear();
+                cmd.CommandText = "DELETE FROM tbl_Produtos WHERE nm_Produto = @nomeProduto";
+                cmd.Parameters.AddWithValue("@nomeProduto", nomeProduto);
+                cmd.Connection = cn;
+                int linhasAfetadas = cmd.ExecuteNonQuery();
+                if (linhasAfetadas > 0)
+                {
+                    Console.WriteLine($"\n\aProduto Deletado");
+                    Console.Write("Pressione Qualquer Tecla Para Continuar...");
+                    Console.ReadKey();
+                    Program.menuPrincipal();
+                }
+                else
+                {
+                    Console.WriteLine($"\n\aProduto Não Deletado");
+                    Console.Write("Pressione Qualquer Tecla Para Continuar...");
+                    Console.ReadKey();
+                    return;
+                }
+            }
+            catch (Exception Erro)
+            {
+                Console.WriteLine($"\a\nProduto Já Encontrado {Erro.Message}");
                 Console.Write("Pressione Qualquer Tecla Para Continuar...");
                 Console.ReadKey();
                 return;

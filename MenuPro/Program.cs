@@ -55,7 +55,7 @@ namespace MenuPro
                         case "1": menuVenda(); break;
                         case "2": exibicaoProduto(); break;
                         case "3": alteracaoProdutos(); break;
-                        case "4": break;
+                        case "4": obterLucro(); break;
                         case "5": break;
                         case "6": break;
                         case "7": break;
@@ -86,7 +86,7 @@ namespace MenuPro
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("MenuPro - Exibição Dos Produtos");
+                Console.WriteLine("MenuPro - Exibição Dos Produtos\n");
                 cSQL.exibirProdutos();
                 func.pesquisarProduto(1);
             }
@@ -121,19 +121,55 @@ namespace MenuPro
                 {
                     case "1": func.adicionarProduto(1); break;
                     case "2": func.pesquisarProduto(2); break;
-                    case "3": break;
+                    case "3": func.pesquisarProduto(3); break;
                     case "x": menuPrincipal(); break;
                     default:
                         Console.WriteLine($"\a\nOpção Inválida!");
                         Console.Write("Pressione Qualquer Tecla Para Continuar...");
                         Console.ReadKey();
                         break;
-
                 }
             }
         }
 
+        static void obterLucro()
+        {
+            var data = DateTime.Now;
+            var dia = data.Date;
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("MenuPro - Verificação Dos Lucros");
+                Console.WriteLine(dia);
+                Console.WriteLine("[1] Exibir Lucros");
+                Console.WriteLine("[2] Exibir Lucro Final Do Dia: ");
+                Console.WriteLine("[X] Sair");
+                Console.Write("Digite Aqui: ");
+                string opcao = Console.ReadLine().ToLower();
+                switch (opcao)
+                {
+                    case "1": exibriLucro(); break;
+                    case "2":  break;
+                    case "x": menuPrincipal(); break;
+                    default:
+                        Console.WriteLine($"\a\nOpção Inválida!");
+                        Console.Write("Pressione Qualquer Tecla Para Continuar...");
+                        Console.ReadKey();
+                        break;
+                }
+            }
+        }
 
+        static void exibriLucro()
+        {
+            Console.Clear();
+            Console.WriteLine("MenuPro - Exibir Lucros Do Dia");
+            lucroObtido Lo = new lucroObtido();
+            Lo.exibirLucro();
+            Console.Write("Pressione Qualquer Tecla Para Continuar...");
+            Console.ReadKey();
+            menuPrincipal();
+        }
 
     }
 }
